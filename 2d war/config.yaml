@@ -1,0 +1,90 @@
+# Configuration for Historical Video Generator
+
+# Voice Profiles (synthetic, non-cloned)
+voice_profiles:
+  deep_male_retro:
+    gender: male
+    pitch: -20
+    speed: 0.9
+    reverb: 0.3
+    voice_id: "en-US-GuyNeural"
+  
+  neutral_female:
+    gender: female
+    pitch: 0
+    speed: 1.0
+    reverb: 0.1
+    voice_id: "en-US-JennyNeural"
+  
+  authoritative_male:
+    gender: male
+    pitch: -10
+    speed: 0.85
+    reverb: 0.4
+    voice_id: "en-GB-RyanNeural"
+  
+  documentary_female:
+    gender: female
+    pitch: -5
+    speed: 0.95
+    reverb: 0.2
+    voice_id: "en-US-AriaNeural"
+
+# Style Templates
+style_templates:
+  authoritarian:
+    tone: "commanding, declarative, short emphatic sentences"
+    pause_pattern: "frequent_short"
+    sentence_structure: "simple, direct"
+    rhetoric: "repetition, imperatives"
+    
+  documentary:
+    tone: "informative, measured, engaging"
+    pause_pattern: "natural"
+    sentence_structure: "varied, descriptive"
+    rhetoric: "questions, transitions"
+    
+  neutral_narrator:
+    tone: "objective, clear, educational"
+    pause_pattern: "moderate"
+    sentence_structure: "balanced"
+    rhetoric: "explanatory"
+    
+  lecture:
+    tone: "academic, thoughtful, pedagogical"
+    pause_pattern: "deliberate"
+    sentence_structure: "complex, analytical"
+    rhetoric: "citations, examples"
+
+# Video Effects
+video_effects:
+  vintage:
+    - sepia_tone
+    - grain
+    - vignette
+    - scanlines
+  
+  cinematic:
+    - color_grade
+    - zoom_pan
+    - fade_edges
+  
+  documentary:
+    - color_correction
+    - subtle_zoom
+    - fade_in_out
+
+# Safety filters
+blocked_keywords:
+  - "violence incitement terms to be filtered"
+  - "hate speech patterns"
+  - "illegal activity promotion"
+
+# Output settings
+output:
+  video_codec: "libx264"
+  audio_codec: "aac"
+  video_quality: "high"
+  fps: 24
+  resolution: [1920, 1080]
+
